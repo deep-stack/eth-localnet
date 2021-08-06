@@ -1,0 +1,80 @@
+=============== Aug 7, 2021 (IST) ===============
+04:41:47.152271 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+04:41:47.160224 db@open opening
+04:41:47.160772 version@stat F·[] S·0B[] Sc·[]
+04:41:47.163178 db@janitor F·2 G·0
+04:41:47.163212 db@open done T·2.968652ms
+04:41:47.164223 db@close closing
+04:41:47.164268 db@close done T·43.65µs
+=============== Aug 7, 2021 (IST) ===============
+04:41:47.201786 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+04:41:47.201881 version@stat F·[] S·0B[] Sc·[]
+04:41:47.201895 db@open opening
+04:41:47.201928 journal@recovery F·1
+04:41:47.203695 journal@recovery recovering @1
+04:41:47.206804 memdb@flush created L0@2 N·10 S·562B "H\xfe\xf2..\xf3\xa9\xa5,v3":"r\x00\x00..\xf3\xa9\xa5,v5"
+04:41:47.208584 version@stat F·[1] S·562B[562B] Sc·[0.25]
+04:41:47.219168 db@janitor F·3 G·0
+04:41:47.219251 db@open done T·17.319607ms
+04:41:53.854874 db@close closing
+04:41:53.854909 db@close done T·34.446µs
+=============== Aug 7, 2021 (IST) ===============
+04:42:44.114646 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+04:42:44.114795 version@stat F·[1] S·562B[562B] Sc·[0.25]
+04:42:44.114808 db@open opening
+04:42:44.114865 journal@recovery F·1
+04:42:44.115309 journal@recovery recovering @3
+04:42:44.118045 memdb@flush created L0@5 N·10 S·380B "Dat..ion,v12":"unc..own,v18"
+04:42:44.118181 version@stat F·[2] S·942B[942B] Sc·[0.50]
+04:42:44.127424 db@janitor F·4 G·0
+04:42:44.127451 db@open done T·12.636507ms
+04:42:44.127973 db@close closing
+04:42:44.128016 db@close done T·42.102µs
+=============== Aug 7, 2021 (IST) ===============
+04:42:44.174260 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+04:42:44.174347 version@stat F·[2] S·942B[942B] Sc·[0.50]
+04:42:44.174359 db@open opening
+04:42:44.174396 journal@recovery F·1
+04:42:44.176080 journal@recovery recovering @6
+04:42:44.179006 memdb@flush created L0@8 N·1 S·303B "eth..\xf3\xa9\xa5,v23":"eth..\xf3\xa9\xa5,v23"
+04:42:44.180704 version@stat F·[3] S·1KiB[1KiB] Sc·[0.75]
+04:42:44.189597 db@janitor F·5 G·0
+04:42:44.189626 db@open done T·15.255597ms
+04:42:50.432141 db@close closing
+04:42:50.432221 db@close done T·76.235µs
+=============== Aug 7, 2021 (IST) ===============
+04:44:04.486235 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+04:44:04.486326 version@stat F·[3] S·1KiB[1KiB] Sc·[0.75]
+04:44:04.486339 db@open opening
+04:44:04.486380 journal@recovery F·1
+04:44:04.486970 journal@recovery recovering @9
+04:44:04.490649 memdb@flush created L0@11 N·4 S·293B "Sna..tor,v26":"unc..own,v25"
+04:44:04.491036 version@stat F·[4] S·1KiB[1KiB] Sc·[1.00]
+04:44:04.501227 db@janitor F·6 G·0
+04:44:04.501257 db@open done T·14.909558ms
+04:44:04.501368 table@compaction L0·4 -> L1·0 S·1KiB Q·29
+04:44:04.502176 db@close closing
+04:44:04.503824 table@build created L1@14 N·15 S·680B "Dat..ion,v12":"unc..own,v28"
+04:44:04.503843 table@build exiting
+04:44:04.503852 table@build revert @14
+04:44:04.504017 db@close done T·1.833658ms
+=============== Aug 7, 2021 (IST) ===============
+04:44:04.557440 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+04:44:04.557548 version@stat F·[4] S·1KiB[1KiB] Sc·[1.00]
+04:44:04.557561 db@open opening
+04:44:04.557601 journal@recovery F·1
+04:44:04.559174 journal@recovery recovering @12
+04:44:04.561613 memdb@flush created L0@14 N·1 S·303B "eth..\xf3\xa9\xa5,v30":"eth..\xf3\xa9\xa5,v30"
+04:44:04.563415 version@stat F·[5] S·1KiB[1KiB] Sc·[1.25]
+04:44:04.572043 db@janitor F·7 G·0
+04:44:04.572074 db@open done T·14.498924ms
+04:44:04.572093 table@compaction L0·5 -> L1·0 S·1KiB Q·31
+04:44:04.575668 table@build created L1@17 N·15 S·680B "Dat..ion,v12":"unc..own,v28"
+04:44:04.575708 version@stat F·[0 1] S·680B[0B 680B] Sc·[0.00 0.00]
+04:44:04.579968 table@compaction committed F-4 S-1KiB Ke·0 D·11 T·7.845722ms
+04:44:04.580102 table@remove removed @11
+04:44:04.580127 table@remove removed @8
+04:44:04.580145 table@remove removed @5
+04:44:04.580163 table@remove removed @2
+04:44:07.276549 db@close closing
+04:44:07.276594 db@close done T·44.472µs
