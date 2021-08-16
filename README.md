@@ -1,7 +1,10 @@
 # eth-localnet
 
-Simple bash script to start a local Ethereum Node
+Simple bash script to start a private local Ethereum Node
 
-Usage : ./run.sh RPC_PORT
+Usage : 
+```bash 
+./run.sh RPC_PORT
+```
  
-Port number is an optional cmd line arg, default is 8545
+Port number is an optional cmd line arg, default is `8545`
