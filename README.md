@@ -28,12 +28,12 @@ geth attach http://localhost:8545
 
 * Run
 ```bash
-miner.start()
+> miner.start()
 ```
 
 * This will start mining
 
 * To stop the mining, Run
 ```bash
-miner.stop()
+> miner.stop()
 ```
