@@ -1,9 +1,7 @@
-if test -f "temp_file"; then
-	rm temp_file
+if test -f "password_file"; then
+	rm password_file
 fi
-if test -d "node00"; then
-	rm -rf node00
-fi
-if test -f "genesis.json"; then
-	rm genesis.json
+
+if test -d "data_dir"; then
+	rm -rf "data_dir"
 fi

@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Default password for ethereum account
+PASSWORD="deepstack"
+
+# Name of directory that will contain databases and keystore
+# Make sure to change value of DATADIR in cleanup.sh if changed here
+DATADIR="data_dir"
+
 # Default port 8545 for RPC
 PORT="8545"
 if [ $# -ge 1 ]
@@ -7,45 +14,19 @@ if [ $# -ge 1 ]
         PORT=$1
 fi
 
-# Creating genesis.json
-echo '{
-        "config": {
-                "chainId": 15,
-                "homesteadBlock": 0,
-                "eip155Block": 0,
-                "eip158Block": 0,
-                "eip150Block": 0
-        },
-        "difficulty": "0",
-        "gasLimit": "21000",
-        "alloc" : {
-
-        }
-}' | tee genesis.json
-
 # Creating a file containing pass to create new acc in non-interactive mode
-echo "Your_Password" | tee temp_file
+echo $PASSWORD | tee password_file
 
 # Creating new acc
-geth --datadir "node00" account new --password temp_file
+geth --datadir "$DATADIR" account new --password password_file
 
 # Creating Genesis Block
-geth --datadir "node00" init genesis.json
+geth --datadir "$DATADIR" init genesis.json
 
-printf "\n\n"
-echo "***********************************************************************"
-echo "*                                                                     *"
-echo "*                                                                     *"
-echo "*     Starting the Blockchain 🔗, Make sure to use Ctrl+C to stop     *"
-echo "*                                                                     *"
-echo "*                                                                     *"
-echo "***********************************************************************"
-printf "\n\n"
-
-geth --identity "node00" \
+geth --identity "$DATADIR" \
  --rpc --rpcport "$PORT" \
  --rpccorsdomain "*" \
- --datadir "./node00" \
+ --datadir "./$DATADIR" \
  --port "30303" \
  --nodiscover \
  --rpcapi "db,eth,net,web3,personal,miner,admin" \

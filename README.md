@@ -1,10 +1,39 @@
-# eth-localnet
+# Eth-Localnet
 
-Simple bash script to start a private local Ethereum Node
+* Script to start a private local Ethereum Node
 
-Usage : 
+* Ensure that geth is installed
+
+## Usage : 
+
 ```bash 
-./run.sh RPC_PORT
+./run.sh [RPC_PORT]
 ```
- 
-Port number is an optional cmd line arg, default is `8545`
+
+* Port number is an optional cmd line arg, default is `8545`
+
+## Testing :
+
+* Run
+```bash 
+./run.sh
+```
+
+* Run
+```bash
+geth attach http://localhost:8545
+```
+
+* This will start the `Geth JavaScript Console`
+
+* Run
+```bash
+miner.start()
+```
+
+* This will start mining
+
+* To stop the mining, Run
+```bash
+miner.stop()
+```
