@@ -14,6 +14,10 @@ if [ $# -ge 1 ]
         PORT=$1
 fi
 
+# Default number of threads to use for mining
+# Recommended to keep it less than or equal to number of CPU cores
+MINER_THREADS=2
+
 # Creating a file containing pass to create new acc in non-interactive mode
 echo $PASSWORD | tee password_file
 
@@ -25,7 +29,7 @@ geth --datadir "$DATADIR" init genesis.json
 
 geth --identity "$DATADIR" \
  --mine \
- --miner.threads 2 \
+ --miner.threads "$MINER_THREADS" \
  --rpc --rpcport "$PORT" \
  --rpccorsdomain "*" \
  --datadir "./$DATADIR" \
