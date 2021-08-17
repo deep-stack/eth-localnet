@@ -24,6 +24,8 @@ geth --datadir "$DATADIR" account new --password password_file
 geth --datadir "$DATADIR" init genesis.json
 
 geth --identity "$DATADIR" \
+ --mine \
+ --miner.threads 2 \
  --rpc --rpcport "$PORT" \
  --rpccorsdomain "*" \
  --datadir "./$DATADIR" \
