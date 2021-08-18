@@ -6,6 +6,8 @@
 
 * Feel free to tweak the difficulty in genesis.json before running `init.sh`
 
+* Ether can be pre-allocated by adding addresses with ethers to `alloc` in `genesis.json`
+
 ## Usage :
 
 * Run this for the first time
