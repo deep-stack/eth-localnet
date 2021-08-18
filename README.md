@@ -2,12 +2,24 @@
 
 * Script to start a private local Ethereum Node
 
-* Ensure that geth is installed
+* Ensure that `geth` is installed
 
-## Usage : 
+* Feel free to tweak the difficulty in genesis.json before running `init.sh`
 
+## Usage :
+
+* Run this for the first time
+```bash
+./init.sh
+```
+* Run this to start mining
 ```bash 
 ./run.sh [RPC_PORT]
 ```
 
 * Port number is an optional cmd line arg, default is `8545`
+
+* Run this to delete the blockcahin
+```bash 
+./cleanup.sh
+```
