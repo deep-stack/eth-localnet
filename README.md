@@ -4,9 +4,18 @@
 
 * Ensure that `geth` is installed
 
-* Feel free to tweak the difficulty in genesis.json before running `init.sh`
+* Difficulty can be adjusted in genesis.json before running `init.sh`. This affects CPU consumption
 
-* Ether can be pre-allocated by adding addresses with ethers to `alloc` in `genesis.json`
+* Ether can be pre-allocated by adding addresses with ethers to `alloc` in `genesis.json`.
+
+  For example :
+```bash
+"alloc": {
+     "ZC7d7A1747C0Eewc107dg5B7522v5F31509b5Cfc": {
+     "balance": "0x1000000000000000000000000"
+    }
+}
+```
 
 ## Usage :
 

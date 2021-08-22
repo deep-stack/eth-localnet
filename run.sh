@@ -4,6 +4,10 @@
 # Make sure to change value of DATADIR in cleanup.sh and init.sh if changed here
 DATADIR="./data_dir"
 
+# Etherbase is a public address to whom mining rewards are sent
+# geth defaults to address of account in DATADIR if left empty
+ETHERBASE=""
+
 # Default port 8545 for RPC
 PORT="8545"
 if [ $# -ge 1 ]
@@ -23,10 +27,12 @@ fi
 geth --identity "$DATADIR" \
  --mine \
  --miner.threads "$MINER_THREADS" \
+ --miner.etherbase "$ETHERBASE" \
  --rpc --rpcport "$PORT" \
  --rpccorsdomain "*" \
  --datadir "./$DATADIR" \
  --port "30303" \
  --nodiscover \
  --rpcapi "db,eth,net,web3,personal,miner,admin" \
- --networkid 1900 --nat "any"
+ --networkid 1900 \
+ --nat "any"
