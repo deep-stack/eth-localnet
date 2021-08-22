@@ -28,7 +28,8 @@ geth --identity "$DATADIR" \
  --mine \
  --miner.threads "$MINER_THREADS" \
  --miner.etherbase "$ETHERBASE" \
- --rpc --rpcport "$PORT" \
+ --rpc \
+ --rpcport "$PORT" \
  --rpccorsdomain "*" \
  --datadir "./$DATADIR" \
  --port "30303" \
